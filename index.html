@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>Usha Kanchukatla — Business Analyst · Data Analyst · Marketing Analyst</title>
+<meta name="description" content="Portfolio of Usha Kanchukatla — MBA in Business Analytics at Pace University. Business Analyst, Data Analyst, and Marketing Analyst based in the New York metro area." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,500;1,700;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#F7F5F0;
+    --bg-alt:#FFFFFF;
+    --surface:#FBFAF7;
+    --ink:#161513;
+    --ink-soft:#3E3B36;
+    --muted:#7A756B;
+    --faint:#B9B2A4;
+    --line:#E4DED1;
+    --line-soft:#ECE7DB;
+    --gold:#B3860B;
+    --gold-bright:#C99B12;
+    --gold-soft:#F1E7C8;
+    --dark:#131211;
+    --dark-2:#1B1A18;
+    --dark-line:#2C2A26;
+    --dark-text:#EDE9E0;
+    --dark-muted:#A39C8E;
+    --chip-bg:#FFFFFF;
+    --shadow:0 1px 0 rgba(22,21,19,.04), 0 18px 40px -28px rgba(22,21,19,.25);
+    --serif:"Playfair Display", Georgia, "Times New Roman", serif;
+    --sans:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#171613;
+      --bg-alt:#1E1C19;
+      --surface:#1E1C19;
+      --ink:#F2EEE4;
+      --ink-soft:#D8D2C4;
+      --muted:#A39C8E;
+      --faint:#5E594F;
+      --line:#33302A;
+      --line-soft:#2A2823;
+      --gold:#D9A81C;
+      --gold-bright:#E4B82E;
+      --gold-soft:#3A3115;
+      --chip-bg:#24221E;
+      --shadow:0 1px 0 rgba(0,0,0,.3), 0 18px 40px -28px rgba(0,0,0,.7);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation-duration:.001s !important; animation-iteration-count:1 !important; transition-duration:.001s !important}
+  }
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  ::selection{background:var(--gold);color:#fff}
+
+  /* progress */
+  .progress{position:fixed;top:0;left:0;height:3px;background:var(--gold);width:0;z-index:60}
+
+  /* nav */
+  header.site-nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 92%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:1440px;margin:0 auto;padding:0 48px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .brand{font-family:var(--serif);font-weight:700;font-size:19px;letter-spacing:.01em;text-decoration:none;white-space:nowrap}
+  nav.main-nav{display:flex;gap:6px;align-items:center}
+  nav.main-nav a{text-decoration:none;font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:10px 12px;min-height:40px;display:inline-flex;align-items:center;border-bottom:2px solid transparent;transition:color .2s, border-color .2s}
+  nav.main-nav a:hover{color:var(--ink)}
+  nav.main-nav a.active{color:var(--gold);border-bottom-color:var(--gold)}
+  .menu-btn{display:none;background:var(--ink);color:var(--bg);border:0;border-radius:4px;min-width:44px;min-height:44px;font-size:18px;cursor:pointer;align-items:center;justify-content:center}
+
+  .wrap{max-width:1100px;margin:0 auto;padding:0 32px}
+  .wrap-wide{max-width:1440px;margin:0 auto;padding:0 48px}
+
+  .kicker{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 18px}
+  .kicker.grey{color:var(--muted)}
+  h2.section-title{font-family:var(--serif);font-weight:800;font-size:clamp(38px,5vw,56px);line-height:1.05;margin:0 0 8px;letter-spacing:-.01em}
+  h2.section-title em{color:var(--gold);font-style:italic;font-weight:700}
+
+  /* ---------- HERO ---------- */
+  .hero{border-bottom:1px solid var(--line)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;min-height:calc(100vh - 64px)}
+  .hero-left{padding:64px 48px 56px;display:flex;flex-direction:column;justify-content:flex-end;border-right:1px solid var(--line)}
+  .hero-loc{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin:0 0 28px}
+  .hero-loc span{color:var(--gold)}
+  h1.name{font-family:var(--serif);margin:0;line-height:.92;letter-spacing:-.015em;text-transform:uppercase}
+  h1.name .first{display:block;font-weight:900;font-size:clamp(64px,9.5vw,124px);color:var(--ink)}
+  h1.name .last{display:block;font-weight:800;font-style:italic;font-size:clamp(44px,6.6vw,86px);color:var(--gold);margin-top:6px;letter-spacing:-.01em}
+  .hero-rule{width:48px;height:3px;background:var(--ink);margin:34px 0 22px}
+  .hero-tag{font-family:var(--serif);font-style:italic;font-size:clamp(16.5px,1.6vw,19px);line-height:1.55;color:var(--ink-soft);max-width:52ch;margin:0}
+  .open-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;align-items:center}
+  .open-label{background:var(--ink);color:var(--bg);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:0 16px;min-height:38px;display:inline-flex;align-items:center;border-radius:3px}
+  .open-label i{width:7px;height:7px;border-radius:50%;background:#4CC38A;display:inline-block;margin-right:9px;animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  .role-chip{border:1px solid var(--line);background:var(--chip-bg);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:0 16px;min-height:38px;display:inline-flex;align-items:center;border-radius:3px;color:var(--ink-soft)}
+  .hero-right{padding:64px 48px 56px;display:flex;flex-direction:column;justify-content:flex-end}
+  .stat-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stat-cell{padding:28px 8px 24px 28px}
+  .stat-cell:nth-child(odd){padding-left:0;border-right:1px solid var(--line)}
+  .stat-cell:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .stat-num{font-family:var(--serif);font-weight:800;font-size:clamp(38px,4vw,52px);line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+  .stat-num sup{font-size:.45em;font-weight:700}
+  .stat-label{font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:9px;line-height:1.5}
+  .hero-position{font-family:var(--serif);font-style:italic;font-size:clamp(16px,1.5vw,18.5px);line-height:1.55;color:var(--ink-soft);margin:28px 0 0;max-width:46ch}
+
+  /* ---------- MARQUEE ---------- */
+  .marquee{overflow:hidden;border-bottom:1px solid var(--line);background:var(--surface);padding:16px 0;white-space:nowrap}
+  .marquee-track{display:inline-flex;animation:scrollx 36s linear infinite;will-change:transform}
+  .marquee:hover .marquee-track{animation-play-state:paused}
+  .marquee span{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);padding:0 6px}
+  .marquee b{color:var(--gold);font-weight:400;padding:0 10px}
+  @keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion: reduce){.marquee-track{animation:none}}
+
+  section{padding:104px 0}
+  section.tint{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  section.white{background:var(--bg-alt)}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+  .about-statement{font-family:var(--serif);font-weight:800;font-size:clamp(32px,3.6vw,44px);line-height:1.18;margin:0 0 30px}
+  .about-statement em{color:var(--gold);font-style:italic;font-weight:700}
+  .about-body p{color:var(--ink-soft);font-size:16.5px;line-height:1.75;margin:0 0 20px}
+  .about-body p:last-child{margin-bottom:0}
+  .bring-box{border:1px solid var(--line);background:var(--surface);padding:36px 36px 10px;box-shadow:var(--shadow)}
+  .bring-box .kicker{color:var(--muted);margin-bottom:8px}
+  .bring-item{display:flex;gap:20px;padding:22px 0;border-bottom:1px solid var(--line-soft)}
+  .bring-item:last-child{border-bottom:0}
+  .bring-num{font-family:var(--serif);font-weight:800;font-size:26px;color:var(--gold-soft);line-height:1.1;min-width:38px}
+  @media (prefers-color-scheme: dark){.bring-num{color:#57491C}}
+  .bring-item h3{font-family:var(--serif);font-size:17.5px;font-weight:700;margin:0 0 5px;line-height:1.3}
+  .bring-item p{margin:0;font-size:14px;line-height:1.6;color:var(--muted)}
+
+  /* ---------- PUBLISHED ---------- */
+  .published-strip{background:var(--dark);color:var(--dark-text);border-top:1px solid var(--dark-line);border-bottom:1px solid var(--dark-line);padding:52px 0 48px;text-align:center}
+  .published-label{font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-bright);margin:0 0 14px}
+  .published-label span{color:var(--dark-muted);font-weight:500}
+  .published-mag{font-family:var(--serif);font-weight:800;font-size:clamp(32px,4.5vw,48px);line-height:1.05;margin:0 0 16px;color:#fff;letter-spacing:-.01em}
+  .published-mag em{color:var(--gold-bright);font-style:italic;font-weight:700}
+  .published-titles{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 18px;font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#EDE9E0}
+  .published-titles .dot{color:var(--gold-bright);font-weight:400}
+  .published-note{font-family:var(--serif);font-style:italic;font-size:15.5px;line-height:1.5;color:var(--dark-muted);margin:16px 0 0}
+  .published-divider{width:48px;height:1px;background:var(--dark-line);margin:36px auto 32px}
+  .editorial-label{font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-bright);margin:0 0 12px}
+  .editorial-title{font-family:var(--serif);font-weight:800;font-style:italic;font-size:clamp(26px,3.6vw,38px);line-height:1.1;margin:0 0 12px;color:#fff}
+  .editorial-meta{font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#EDE9E0;margin:0 0 10px}
+  .editorial-credits{font-family:var(--serif);font-style:italic;font-size:15.5px;line-height:1.6;color:var(--dark-muted);margin:0}
+
+  /* ---------- EDUCATION ---------- */
+  .edu-row{display:grid;grid-template-columns:300px 1fr;gap:48px;padding:44px 0;border-bottom:1px solid var(--line);align-items:start}
+  .edu-row:first-of-type{padding-top:36px}
+  .edu-row h3{font-family:var(--serif);font-size:23px;font-weight:800;line-height:1.25;margin:0 0 8px}
+  .edu-school{color:var(--gold);font-weight:600;font-size:14.5px;line-height:1.5;margin:0 0 12px}
+  .edu-meta{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+  .edu-course{font-size:13.5px;line-height:1.7;color:var(--muted);margin:0}
+  .edu-course strong{color:var(--ink-soft);font-weight:600}
+  .gpa-bar{border-radius:3px;padding:11px 14px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .gpa-bar.gold{background:var(--gold);color:#fff}
+  .gpa-bar.black{background:var(--ink);color:var(--bg)}
+  .gpa-bar .track{flex:1;height:5px;background:rgba(255,255,255,.28);border-radius:99px;overflow:hidden}
+  .gpa-bar.black .track{background:color-mix(in srgb, var(--bg) 25%, transparent)}
+  .gpa-bar .fill{height:100%;background:#fff;border-radius:99px;width:0;transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
+  .gpa-bar.black .fill{background:var(--gold)}
+  .edu-note{font-size:13.5px;color:var(--muted);margin:14px 0 0;line-height:1.65}
+  .edu-note b{color:var(--ink-soft)}
+
+  /* ---------- SKILLS ---------- */
+  .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);background:var(--bg-alt);margin-top:44px}
+  .skill-col{padding:34px 32px 26px}
+  .skill-col + .skill-col{border-left:1px solid var(--line)}
+  .skill-col h3{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+  .skill-col ul{list-style:none;margin:0;padding:0}
+  .skill-col li{font-size:15px;color:var(--ink-soft);padding:11px 0;border-bottom:1px solid var(--line-soft);line-height:1.45}
+  .skill-col li:last-child{border-bottom:0}
+
+  /* ---------- EXPERIENCE ---------- */
+  .exp-row{display:grid;grid-template-columns:210px 1fr;gap:40px;padding:40px 0;border-bottom:1px solid var(--line)}
+  .exp-row:first-of-type{margin-top:28px;border-top:1px solid var(--line)}
+  .exp-date{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding-top:6px;line-height:1.7}
+  .exp-row h3{font-family:var(--serif);font-size:22px;font-weight:800;margin:0 0 4px;line-height:1.25}
+  .exp-org{color:var(--gold);font-weight:600;font-size:14.5px;margin:0 0 12px}
+  .exp-desc{color:var(--ink-soft);font-size:15.5px;line-height:1.7;margin:0;max-width:68ch}
+
+  /* ---------- PROJECTS (dark) ---------- */
+  section.projects{background:var(--dark);color:var(--dark-text);border:0}
+  section.projects .kicker{color:var(--gold-bright)}
+  section.projects h2.section-title{color:#fff}
+  .proj-list{margin-top:48px;border:1px solid var(--dark-line)}
+  .proj{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--dark-line)}
+  .proj:last-child{border-bottom:0}
+  .proj-visual{position:relative;background:#0D0C0B;border-right:1px solid var(--dark-line);min-height:340px;display:flex;align-items:center;justify-content:center;padding:36px;overflow:hidden}
+  .proj-visual svg{width:100%;max-width:420px;height:auto;display:block}
+  .proj-visual .cap{position:absolute;left:28px;bottom:22px;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#5C574C}
+  .proj-visual .big-num{position:absolute;right:22px;bottom:8px;font-family:var(--serif);font-weight:900;font-size:76px;line-height:1;color:rgba(255,255,255,.07)}
+  .proj-body{padding:52px 48px;display:flex;flex-direction:column;justify-content:center}
+  .proj-cat{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-bright);margin:0 0 14px}
+  .proj-body h3{font-family:var(--serif);font-size:clamp(23px,2.4vw,29px);font-weight:800;line-height:1.2;margin:0 0 14px;color:#F5F1E6}
+  .proj-body p.desc{color:var(--dark-muted);font-size:15.5px;line-height:1.7;margin:0 0 24px}
+  .tags{display:flex;flex-wrap:wrap;gap:8px}
+  .tag{border:1px solid var(--dark-line);color:#CFC8B8;font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:8px 12px;min-height:32px;display:inline-flex;align-items:center;border-radius:2px}
+
+  /* ---------- BY THE NUMBERS ---------- */
+  .numbers-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);margin-top:44px;background:var(--bg-alt)}
+  .num-cell{padding:44px 28px 38px;text-align:center}
+  .num-cell + .num-cell{border-left:1px solid var(--line)}
+  .num-big{font-family:var(--serif);font-weight:800;font-size:clamp(40px,4.4vw,58px);line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+  .num-big .plus{color:var(--gold)}
+  .num-label{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:12px;line-height:1.6}
+
+  /* ---------- CREDENTIALS ---------- */
+  .cred-list{margin-top:36px;border-top:1px solid var(--line)}
+  .cred-row{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:baseline;padding:26px 4px;border-bottom:1px solid var(--line)}
+  .cred-row h3{font-family:var(--serif);font-size:21px;font-weight:700;margin:0 0 4px}
+  .cred-row p{margin:0;color:var(--muted);font-size:14.5px}
+  .cred-year{font-family:var(--serif);font-weight:800;font-size:22px;color:var(--gold);white-space:nowrap}
+
+  /* ---------- CONTACT ---------- */
+  section.contact{background:var(--dark);color:var(--dark-text);text-align:left}
+  section.contact .kicker{color:var(--gold-bright)}
+  .contact-title{font-family:var(--serif);font-weight:800;font-size:clamp(44px,6.5vw,76px);line-height:1.02;margin:0 0 20px;color:#fff}
+  .contact-title em{color:var(--gold-bright);font-style:italic;font-weight:700}
+  .contact-sub{color:var(--dark-muted);font-size:17px;line-height:1.7;max-width:56ch;margin:0 0 40px}
+  .contact-links{display:flex;flex-wrap:wrap;gap:12px}
+  .c-btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border-radius:3px;text-decoration:none;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:transform .15s, background .2s, color .2s}
+  .c-btn.primary{background:var(--gold);color:#141310}
+  .c-btn.primary:hover{background:var(--gold-bright)}
+  .c-btn.ghost{border:1px solid #45413A;color:#EDE9E0}
+  .c-btn.ghost:hover{border-color:var(--gold-bright);color:var(--gold-bright)}
+  .contact-meta{display:flex;flex-wrap:wrap;gap:10px 36px;margin-top:52px;padding-top:28px;border-top:1px solid var(--dark-line);font-size:13px;color:var(--dark-muted)}
+  .contact-meta b{color:#EDE9E0;font-weight:600}
+  footer{padding:28px 0 36px;background:var(--dark);color:#6E685C;font-size:12.5px;border-top:1px solid var(--dark-line)}
+  footer .wrap-wide{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+  .to-top{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:4px;background:var(--ink);color:var(--bg);border:1px solid var(--line);font-size:17px;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:1;pointer-events:auto;z-index:40;box-shadow:0 8px 24px -10px rgba(0,0,0,.4)}
+
+  .reveal{opacity:1;transform:none}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:1020px){
+    .nav-inner{padding:0 24px}
+    nav.main-nav a{padding:10px 8px;letter-spacing:.1em}
+    .hero-left,.hero-right{padding:48px 32px}
+    .about-grid{gap:44px}
+  }
+  @media (max-width:860px){
+    nav.main-nav{display:none;position:absolute;top:64px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;padding:10px 16px 16px}
+    nav.main-nav.open{display:flex}
+    nav.main-nav a{min-height:48px;border-bottom:1px solid var(--line-soft)}
+    .menu-btn{display:inline-flex}
+    .hero-grid{grid-template-columns:1fr;min-height:0}
+    .hero-left{border-right:0;padding:44px 24px 36px}
+    .hero-right{padding:8px 24px 44px}
+    section{padding:72px 0}
+    .wrap{padding:0 24px}
+    .wrap-wide{padding:0 24px}
+    .about-grid{grid-template-columns:1fr}
+    .edu-row{grid-template-columns:1fr;gap:20px}
+    .skills-grid{grid-template-columns:1fr}
+    .skill-col + .skill-col{border-left:0;border-top:1px solid var(--line)}
+    .exp-row{grid-template-columns:1fr;gap:10px}
+    .proj{grid-template-columns:1fr}
+    .proj-visual{border-right:0;border-bottom:1px solid var(--dark-line);min-height:260px}
+    .proj-body{padding:36px 26px 42px}
+    .numbers-grid{grid-template-columns:1fr 1fr}
+    .num-cell + .num-cell{border-left:0}
+    .num-cell:nth-child(even){border-left:1px solid var(--line)}
+    .num-cell:nth-child(n+3){border-top:1px solid var(--line)}
+    .stat-cell{padding:22px 6px 20px 18px}
+    .stat-cell:nth-child(odd){padding-left:0}
+    .bring-box{padding:28px 24px 6px}
+  }
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">Usha Kanchukatla</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-grid wrap-wide" style="padding-top:0;padding-bottom:0">
+      <div class="hero-left">
+        <p class="hero-loc">New York Metro Area <span>◆</span> MBA, Business Analytics</p>
+        <h1 class="name"><span class="first">Usha</span><span class="last">Kanchukatla</span></h1>
+        <div class="hero-rule"></div>
+        <p class="hero-tag">Hyderabad to New York, a founder's hustle and an analyst's brain. I turned my own thrift brand into my first dataset, and an MBA in Business Analytics into how I think. I'm Usha — and I'm ready to put that to work.</p>
+        <div class="open-row">
+          <span class="open-label"><i></i>Open to Work</span>
+          <span class="role-chip">Business Analyst</span>
+          <span class="role-chip">Data Analyst</span>
+          <span class="role-chip">Marketing Analyst</span>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="stat-grid">
+          <div class="stat-cell">
+            <div class="stat-num"><span data-count="3.8" data-decimals="1">0.0</span></div>
+            <div class="stat-label">MBA GPA · Pace University</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num"><span data-count="8.78" data-decimals="2">0.00</span></div>
+            <div class="stat-label">BBA CGPA / 10 · Osmania University</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num"><span data-count="6">0</span></div>
+            <div class="stat-label">Analytics Projects</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num"><span data-count="2100">0</span><sup>+</sup></div>
+            <div class="stat-label">Audience Reached Through Campus Marketing</div>
+          </div>
+        </div>
+        <p class="hero-position">I sit at the intersection of data, marketing, and strategy — and I bring a founder's eye for what the numbers are actually for.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marqueeTrack">
+      <span>SQL</span><b>◆</b><span>Tableau</span><b>◆</b><span>Power BI</span><b>◆</b><span>R (ggplot2, caret, dplyr)</span><b>◆</b><span>Python (basic)</span><b>◆</b><span>Excel (Advanced)</span><b>◆</b><span>SPSS</span><b>◆</b><span>MS Access</span><b>◆</b><span>Regression &amp; Classification</span><b>◆</b><span>Data Visualization</span><b>◆</b><span>Marketing Analytics</span><b>◆</b><span>Claude &amp; AI Tools</span><b>◆</b>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="white">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="reveal">
+          <p class="kicker">A Little About Me</p>
+          <h2 class="about-statement">I don't just run the numbers. I ask what they're <em>for.</em></h2>
+          <div class="about-body">
+            <p>She grew up in Hyderabad, India, and built her path to New York on her own — a BBA at Osmania University, then an MBA in Business Analytics at Pace University's Lubin School of Business.</p>
+            <p>Along the way she founded Thrift Bae, her own NYC-inspired digital thrift brand, which taught her marketing analytics the real way: her own money, her own audience, her own results to explain. Her projects range from predicting credit-card default on 30,000 records to interviewing 50+ women entrepreneurs about what it actually takes to build a business.</p>
+            <p>What ties it together: she cares about the decision the data is supposed to change, and she can explain it in plain words to the people who have to make it.</p>
+          </div>
+        </div>
+        <div class="bring-box reveal">
+          <p class="kicker">What I Bring</p>
+          <div class="bring-item">
+            <div class="bring-num">01</div>
+            <div>
+              <h3>Marketing analytics, learned firsthand</h3>
+              <p>Ran her own brand's marketing end to end — content, audience growth, engagement tracking — before she ever studied it in a classroom.</p>
+            </div>
+          </div>
+          <div class="bring-item">
+            <div class="bring-num">02</div>
+            <div>
+              <h3>Real research chops</h3>
+              <p>Interviewed 50+ women entrepreneurs and coded the findings; comfortable turning messy qualitative input into structured insight.</p>
+            </div>
+          </div>
+          <div class="bring-item">
+            <div class="bring-num">03</div>
+            <div>
+              <h3>Modeling with judgment</h3>
+              <p>Built predictive models on 30,000 records (AUC 0.78) and knows which variable actually drives the answer — and which ones just look busy.</p>
+            </div>
+          </div>
+          <div class="bring-item">
+            <div class="bring-num">04</div>
+            <div>
+              <h3>A communicator, not just an analyst</h3>
+              <p>Translates analysis into decisions and next steps, in plain language stakeholders actually use.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLISHED -->
+  <div class="published-strip" aria-label="Published in Fusion Magazine">
+    <div class="wrap">
+      <p class="published-label">Published</p>
+      <h2 class="published-mag">Fusion <em>Magazine</em></h2>
+      <div class="published-titles"><span>Hard Wear</span><span class="dot" aria-hidden="true">·</span><span>True America</span></div>
+      <p class="published-note">Featured in two creative editorial shoots.</p>
+      <div class="published-divider" aria-hidden="true"></div>
+      <p class="editorial-label">Editorial Shoot</p>
+      <h3 class="editorial-title">Fall is in the Air</h3>
+      <p class="editorial-meta">Central Park, New York · October 2026</p>
+      <p class="editorial-credits">Directed by Tessa Hanson · Photographed by Adam Nabil · Modeled by Usha Kanchukatla</p>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <section id="education" style="padding-top:88px">
+    <div class="wrap">
+      <p class="kicker grey">Where I Studied</p>
+      <h2 class="section-title">Education</h2>
+
+      <div class="edu-row reveal">
+        <div>
+          <h3>MBA — Business Analytics</h3>
+          <p class="edu-school">Pace University, Lubin School of Business · New York, NY</p>
+          <p class="edu-meta">Jan 2025 – Dec 2026 · Graduation May 2027</p>
+          <p class="edu-course"><strong>Relevant coursework:</strong> Predictive Analytics · Visual Analytics · Data Visualization · Database Management Systems · Marketing Management Systems · Managing Operations &amp; Projects · Global Strategy</p>
+        </div>
+        <div>
+          <div class="gpa-bar gold"><span>GPA 3.8 / 4.0</span><span class="track"><span class="fill" data-fill="95"></span></span><span>95%</span></div>
+          <p class="edu-note"><b>STEM-designated program.</b> Coursework completes December 2026, with the graduation walk in May 2027.</p>
+        </div>
+      </div>
+
+      <div class="edu-row reveal">
+        <div>
+          <h3>BBA — Business Administration</h3>
+          <p class="edu-school">Osmania University · St. Pious X Degree &amp; PG College for Women · Hyderabad, India</p>
+          <p class="edu-meta">2021 – 2024</p>
+          <p class="edu-course"><strong>Relevant coursework:</strong> Business Analytics · Business Intelligence &amp; Data Visualization · Business Statistics · Management Science · Financial Management</p>
+        </div>
+        <div>
+          <div class="gpa-bar black"><span>CGPA 8.78 / 10</span><span class="track"><span class="fill" data-fill="87.8"></span></span><span>87.8%</span></div>
+          <p class="edu-note">Bachelor of Business Administration, awarded by Osmania University in June 2024.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="white" style="border-top:1px solid var(--line)">
+    <div class="wrap">
+      <p class="kicker grey">What I Work With</p>
+      <h2 class="section-title">Technical <em>Skills</em></h2>
+      <div class="skills-grid reveal">
+        <div class="skill-col">
+          <h3>Analytics &amp; Visualization</h3>
+          <ul>
+            <li>Tableau</li>
+            <li>Power BI</li>
+            <li>Microsoft Excel (Advanced)</li>
+            <li>SPSS</li>
+            <li>Data Visualization</li>
+            <li>Dashboard Design</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3>Data &amp; Modeling</h3>
+          <ul>
+            <li>SQL (querying &amp; database design)</li>
+            <li>R (ggplot2, caret, dplyr)</li>
+            <li>Python (basic)</li>
+            <li>MS Access</li>
+            <li>Logistic Regression</li>
+            <li>Decision Trees &amp; Random Forest</li>
+            <li>Predictive Modeling</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3>Business &amp; Marketing</h3>
+          <ul>
+            <li>Marketing Analytics</li>
+            <li>Go-To-Market Strategy</li>
+            <li>Requirements Gathering</li>
+            <li>Stakeholder Communication</li>
+            <li>Claude &amp; AI-assisted analysis</li>
+            <li>GitHub</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <p class="kicker grey">Where I've Worked</p>
+      <h2 class="section-title">Experience</h2>
+
+      <div class="exp-row reveal">
+        <div class="exp-date">Feb 2024 – Present</div>
+        <div>
+          <h3>Founder &amp; Creative Director</h3>
+          <p class="exp-org">Thrift Bae · New York metro (digital brand)</p>
+          <p class="exp-desc">Founded an NYC-inspired digital thrift brand; runs product selection, pricing, content, and audience growth, and tracks engagement and listing performance to decide what to promote next.</p>
+        </div>
+      </div>
+
+      <div class="exp-row reveal">
+        <div class="exp-date">Aug 2026 – Nov 2026</div>
+        <div>
+          <h3>Marketing Associate</h3>
+          <p class="exp-org">Pace Indian Students Association (PISA) · Pace University, New York, NY</p>
+          <p class="exp-desc">Promoted 3 campus events to a 2,100+ follower Instagram audience; designed 4 posters plus social posts and videos; ran promo tabling and tracked reach, engagement, and turnout to improve each event's promotion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <div class="wrap-wide">
+      <p class="kicker">What I've Built</p>
+      <h2 class="section-title">Projects</h2>
+
+      <div class="proj-list">
+
+        <article class="proj">
+          <div class="proj-visual" aria-hidden="true">
+            <svg viewBox="0 0 420 240" role="img" aria-label="">
+              <g stroke="#2C2A26" stroke-width="1"><line x1="30" y1="50" x2="390" y2="50"/><line x1="30" y1="100" x2="390" y2="100"/><line x1="30" y1="150" x2="390" y2="150"/><line x1="30" y1="200" x2="390" y2="200"/></g>
+              <path d="M40 200 C120 195, 170 150, 220 118 C275 84, 320 55, 385 38" fill="none" stroke="#C99B12" stroke-width="3"/>
+              <path d="M40 200 L385 38" fill="none" stroke="#5C574C" stroke-width="1.5" stroke-dasharray="5 6"/>
+              <circle cx="220" cy="118" r="6" fill="#C99B12"/><circle cx="320" cy="62" r="6" fill="#C99B12"/>
+              <text x="36" y="30" fill="#C99B12" font-family="Inter,sans-serif" font-size="11" letter-spacing="2">AUC 0.78</text>
+              <text x="388" y="222" text-anchor="end" fill="#5C574C" font-family="Inter,sans-serif" font-size="11" letter-spacing="2">PAY_0 · TOP DRIVER</text>
+            </svg>
+            <span class="cap">Predictive Model · 30,000 Records</span><span class="big-num">01</span>
+          </div>
+          <div class="proj-body">
+            <p class="proj-cat">Predictive Analytics</p>
+            <h3>Credit Card Default Prediction</h3>
+            <p class="desc">Built logistic regression, decision tree, and random forest models in R on 30,000 credit-card records to predict default; reached AUC 0.78 and identified recent payment behavior (PAY_0) as the dominant risk driver.</p>
+            <div class="tags"><span class="tag">R</span><span class="tag">Machine Learning</span><span class="tag">Logistic Regression</span><span class="tag">Random Forest</span><span class="tag">caret</span></div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="proj-visual" aria-hidden="true">
+            <svg viewBox="0 0 420 240" role="img" aria-label="">
+              <g stroke="#2C2A26" stroke-width="1"><line x1="30" y1="60" x2="390" y2="60"/><line x1="30" y1="110" x2="390" y2="110"/><line x1="30" y1="160" x2="390" y2="160"/><line x1="30" y1="210" x2="390" y2="210"/></g>
+              <polyline points="45,185 105,120 165,145 225,80 285,100 345,55 385,42" fill="none" stroke="#C99B12" stroke-width="3"/>
+              <polyline points="45,205 105,190 165,178 225,160 285,140 345,118 385,105" fill="none" stroke="#8A8474" stroke-width="2" stroke-dasharray="6 6"/>
+              <circle cx="225" cy="80" r="6" fill="#C99B12"/><circle cx="385" cy="42" r="6" fill="#C99B12"/>
+              <text x="36" y="34" fill="#C99B12" font-family="Inter,sans-serif" font-size="11" letter-spacing="2">REVENUE</text>
+              <text x="388" y="232" text-anchor="end" fill="#5C574C" font-family="Inter,sans-serif" font-size="11" letter-spacing="2">PROFIT · THE GAP</text>
+            </svg>
+            <span class="cap">Visual Analytics · 3,500 Transactions</span><span class="big-num">02</span>
+          </div>
+          <div class="proj-body">
+            <p class="proj-cat">Visual Analytics</p>
+            <h3>Revenue Isn't Reality</h3>
+            <p class="desc">Analyzed 3,500 retail transactions in Tableau, R, and Excel to test whether revenue equals profit; regression and GLM analysis showed heavy discounting quietly creating low-profit and loss-making product lines.</p>
+            <div class="tags"><span class="tag">Tableau</span><span class="tag">R</span><span class="tag">Excel</span><span class="tag">Regression</span><span class="tag">GLM</span></div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="proj-visual" aria-hidden="true">
+            <svg viewBox="0 0 420 240" role="img" aria-label="">
+              <g font-family="Inter,sans-serif" text-anchor="middle">
+                <rect x="30" y="30" width="130" height="62" rx="4" fill="#1B1A18" stroke="#3A372F"/>
+                <text x="95" y="56" fill="#C99B12" font-size="12" letter-spacing="2">CUSTOMERS</text>
+                <text x="95" y="76" fill="#8A8474" font-size="10">id · segment · region</text>
+                <rect x="260" y="30" width="130" height="62" rx="4" fill="#1B1A18" stroke="#3A372F"/>
+                <text x="325" y="56" fill="#C99B12" font-size="12" letter-spacing="2">ORDERS</text>
+                <text x="325" y="76" fill="#8A8474" font-size="10">order_id · date · qty</text>
+                <rect x="145" y="140" width="130" height="62" rx="4" fill="#1B1A18" stroke="#C99B12"/>
+                <text x="210" y="166" fill="#C99B12" font-size="12" letter-spacing="2">PRODUCTS</text>
+                <text x="210" y="186" fill="#8A8474" font-size="10">sku · category · price</text>
+              </g>
+              <g stroke="#5C574C" stroke-width="1.5" stroke-dasharray="4 4"><line x1="130" y1="92" x2="180" y2="140"/><line x1="290" y1="92" x2="240" y2="140"/></g>
+            </svg>
+            <span class="cap">SQL Database Design · MS Access</span><span class="big-num">03</span>
+          </div>
+          <div class="proj-body">
+            <p class="proj-cat">Database Design · SQL</p>
+            <h3>MSC Industrial Supply Database</h3>
+            <p class="desc">Designed and built a normalized relational database in MS Access with SQL — ERD, normalized tables, and reporting views that turn raw operational data into decision-ready reports.</p>
+            <div class="tags"><span class="tag">SQL</span><span class="tag">MS Access</span><span class="tag">Database Design</span><span class="tag">ERD</span><span class="tag">Reporting Views</span></div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="proj-visual" aria-hidden="true">
+            <svg viewBox="0 0 420 240" role="img" aria-label="">
+              <g font-family="Inter,sans-serif" text-anchor="middle">
+                <rect x="35" y="110" width="100" height="90" rx="4" fill="#1B1A18" stroke="#3A372F"/>
+                <text x="85" y="150" fill="#EDE9E0" font-size="22" font-weight="700">$39</text>
+                <text x="85" y="176" fill="#8A8474" font-size="10" letter-spacing="2">BASIC</text>
+                <rect x="160" y="75" width="100" height="125" rx="4" fill="#1B1A18" stroke="#C99B12"/>
+                <text x="210" y="122" fill="#C99B12" font-size="24" font-weight="700">$99</text>
+                <text x="210" y="150" fill="#8A8474" font-size="10" letter-spacing="2">PLUS</text>
+                <rect x="285" y="40" width="100" height="160" rx="4" fill="#1B1A18" stroke="#3A372F"/>
+                <text x="335" y="94" fill="#EDE9E0" font-size="22" font-weight="700">$199</text>
+                <text x="335" y="122" fill="#8A8474" font-size="10" letter-spacing="2">PREMIUM</text>
+              </g>
+              <text x="36" y="26" fill="#5C574C" font-family="Inter,sans-serif" font-size="11" letter-spacing="2">TIERED MEMBERSHIP PRICING</text>
+            </svg>
+            <span class="cap">GTM Strategy · 29-Slide Plan</span><span class="big-num">04</span>
+          </div>
+          <div class="proj-body">
+            <p class="proj-cat">Go-To-Market Strategy</p>
+            <h3>Post4Food GTM Plan</h3>
+            <p class="desc">Built a 29-slide go-to-market plan with an Excel financial model for a campus food platform: tiered membership pricing ($39/$99/$199), a 10–15% partnership commission model, and a festival-first launch strategy.</p>
+            <div class="tags"><span class="tag">GTM Strategy</span><span class="tag">Excel Financial Model</span><span class="tag">Market Analysis</span><span class="tag">Pricing</span></div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="proj-visual" aria-hidden="true">
+            <svg viewBox="0 0 420 240" role="img" aria-label="">
+              <g>
+                <rect x="40" y="45" width="200" height="16" rx="8" fill="#C99B12"/>
+                <rect x="40" y="85" width="265" height="16" rx="8" fill="#4A463E"/>
+                <rect x="40" y="125" width="150" height="16" rx="8" fill="#C99B12" opacity=".75"/>
+                <rect x="40" y="165" width="225" height="16" rx="8" fill="#4A463E"/>
+              </g>
+              <text x="36" y="28" fill="#C99B12" font-family="Inter,sans-serif" font-size="11" letter-spacing="2">50+ INTERVIEWS · THEMES CODED</text>
+              <text x="330" y="58" fill="#EDE9E0" font-family="Playfair Display,serif" font-size="26" font-weight="800">50+</text>
+              <text x="322" y="140" fill="#5C574C" font-family="Inter,sans-serif" font-size="10" letter-spacing="1.5">SPSS</text>
+              <text x="322" y="180" fill="#5C574C" font-family="Inter,sans-serif" font-size="10" letter-spacing="1.5">APR–MAY 2024</text>
+            </svg>
+            <span class="cap">Primary Research · India</span><span class="big-num">05</span>
+          </div>
+          <div class="proj-body">
+            <p class="proj-cat">Research</p>
+            <h3>Women Entrepreneurship Study</h3>
+            <p class="desc">Interviewed 50+ women entrepreneurs in India (Apr–May 2024); analyzed responses with SPSS and thematic coding to surface the real barriers and support systems behind women-led businesses.</p>
+            <div class="tags"><span class="tag">SPSS</span><span class="tag">Thematic Coding</span><span class="tag">Primary Research</span><span class="tag">Survey Design</span></div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="proj-visual" aria-hidden="true">
+            <svg viewBox="0 0 420 240" role="img" aria-label="">
+              <g font-family="Inter,sans-serif" text-anchor="middle" font-size="12" letter-spacing="1.5">
+                <rect x="30" y="35" width="105" height="52" rx="4" fill="#1B1A18" stroke="#3A372F"/><text x="82" y="66" fill="#EDE9E0">LENOVO</text>
+                <rect x="157" y="35" width="105" height="52" rx="4" fill="#1B1A18" stroke="#C99B12"/><text x="209" y="66" fill="#C99B12">IKEA</text>
+                <rect x="284" y="35" width="105" height="52" rx="4" fill="#1B1A18" stroke="#3A372F"/><text x="336" y="66" fill="#EDE9E0">DAIMLER</text>
+                <rect x="93" y="130" width="105" height="52" rx="4" fill="#1B1A18" stroke="#3A372F"/><text x="145" y="161" fill="#EDE9E0">HISENSE</text>
+                <rect x="220" y="130" width="105" height="52" rx="4" fill="#1B1A18" stroke="#3A372F"/><text x="272" y="161" fill="#8A8474" font-size="9" letter-spacing=".5">5 FORCES · PESTLE</text>
+              </g>
+            </svg>
+            <span class="cap">Global Strategy · Case Analysis</span><span class="big-num">06</span>
+          </div>
+          <div class="proj-body">
+            <p class="proj-cat">Global Strategy</p>
+            <h3>Global Strategy Case Studies</h3>
+            <p class="desc">Analyzed Lenovo, IKEA, Daimler, and Hisense market-entry strategies using Porter's Five Forces, PESTLE, and Blue Ocean frameworks, scoring and comparing entry decisions across markets.</p>
+            <div class="tags"><span class="tag">Porter's Five Forces</span><span class="tag">PESTLE</span><span class="tag">Blue Ocean</span><span class="tag">Case Analysis</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BY THE NUMBERS -->
+  <section class="white">
+    <div class="wrap">
+      <p class="kicker grey">By the Numbers</p>
+      <h2 class="section-title"><em>Analytics</em> at a glance</h2>
+      <div class="numbers-grid reveal">
+        <div class="num-cell">
+          <div class="num-big"><span data-count="30000">0</span></div>
+          <div class="num-label">Records Modeled</div>
+        </div>
+        <div class="num-cell">
+          <div class="num-big"><span data-count="50">0</span><span class="plus">+</span></div>
+          <div class="num-label">Entrepreneurs Interviewed</div>
+        </div>
+        <div class="num-cell">
+          <div class="num-big"><span data-count="3500">0</span></div>
+          <div class="num-label">Transactions Analyzed</div>
+        </div>
+        <div class="num-cell">
+          <div class="num-big"><span data-count="2100">0</span><span class="plus">+</span></div>
+          <div class="num-label">Audience Reached</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section id="credentials" style="padding-top:88px">
+    <div class="wrap">
+      <p class="kicker grey">Recognition</p>
+      <h2 class="section-title">Certifications <em>&amp; Awards</em></h2>
+      <div class="cred-list reveal">
+        <div class="cred-row">
+          <div>
+            <h3>INSPIRE Badge</h3>
+            <p>Pace University</p>
+          </div>
+          <div class="cred-year">2026</div>
+        </div>
+        <div class="cred-row">
+          <div>
+            <h3>BCG Strategy Consulting Job Simulation</h3>
+            <p>Forage</p>
+          </div>
+          <div class="cred-year">2025</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <p class="kicker">Get in Touch</p>
+      <h2 class="contact-title">Let's <em>Connect</em></h2>
+      <p class="contact-sub">I'm looking for 2027-start roles in business analytics, operations, and marketing strategy in the New York metro area. If you're hiring — or just want to talk data, marketing, or building a brand from scratch — my inbox is open.</p>
+      <div class="contact-links">
+        <a class="c-btn primary" href="mailto:kanchukatlausha.19@gmail.com">✉&nbsp; Email Me</a>
+        <a class="c-btn ghost" href="https://www.linkedin.com/in/usha-kanchukatla-98267a306" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="c-btn ghost" href="https://github.com/kanchukatlausha19-web" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+      <div class="contact-meta">
+        <span><b>Location</b> &nbsp;New York metro area</span>
+        <span><b>Email</b> &nbsp;kanchukatlausha.19@gmail.com</span>
+        <span><b>Focus</b> &nbsp;Business · Data · Marketing Analytics</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap-wide">
+    <span>© 2026 Usha Kanchukatla</span>
+    <span>Hyderabad → New York · MBA, Business Analytics, Pace University</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+<script>
+(function(){
+  // duplicate marquee for seamless loop
+  var track = document.getElementById('marqueeTrack');
+  track.innerHTML += track.innerHTML;
+
+  // mobile menu
+  var btn = document.getElementById('menuBtn');
+  var nav = document.getElementById('mainNav');
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = open ? '✕' : '☰';
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){ nav.classList.remove('open'); btn.textContent = '☰'; btn.setAttribute('aria-expanded','false'); }
+  });
+
+  // progress + to-top + scrollspy
+  var prog = document.getElementById('progress');
+  var toTop = document.getElementById('toTop');
+  var links = Array.prototype.slice.call(nav.querySelectorAll('a'));
+  var sections = links.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+  function onScroll(){
+    var st = window.scrollY;
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    prog.style.width = (h > 0 ? (st / h) * 100 : 0) + '%';
+    toTop.classList.toggle('show', st > 600);
+    var current = null;
+    sections.forEach(function(s){ if(s.getBoundingClientRect().top <= 120) current = s.id; });
+    links.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#' + current); });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  toTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+
+  // counters
+  function fmt(el, val){
+    var dec = parseInt(el.getAttribute('data-decimals') || '0', 10);
+    if(dec > 0) return val.toFixed(dec);
+    return Math.round(val).toLocaleString('en-US');
+  }
+  function animateCount(el){
+    var target = parseFloat(el.getAttribute('data-count'));
+    var dec = parseInt(el.getAttribute('data-decimals') || '0', 10);
+    var dur = 1400, start = null;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(el, target * eased);
+      if(p < 1) requestAnimationFrame(step);
+      else el.textContent = fmt(el, target);
+    }
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){ el.textContent = fmt(el, target); return; }
+    requestAnimationFrame(step);
+  }
+  var counted = new WeakSet();
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(!en.isIntersecting) return;
+      en.target.classList.add('in');
+      en.target.querySelectorAll('[data-count]').forEach(function(el){
+        if(!counted.has(el)){ counted.add(el); animateCount(el); }
+      });
+      if(en.target.hasAttribute('data-count') && !counted.has(en.target)){ counted.add(en.target); animateCount(en.target); }
+      en.target.querySelectorAll('.fill').forEach(function(f){ f.style.width = f.getAttribute('data-fill') + '%'; });
+      io.unobserve(en.target);
+    });
+  }, {threshold:.25});
+  document.querySelectorAll('.reveal, .stat-cell, .num-cell, .edu-row').forEach(function(el){ io.observe(el); });
+  // hero counters are above the fold — trigger directly too
+  document.querySelectorAll('.hero [data-count]').forEach(function(el){
+    setTimeout(function(){ if(!counted.has(el)){ counted.add(el); animateCount(el); } }, 250);
+  });
+})();
+</script>
+</body>
+</html>
